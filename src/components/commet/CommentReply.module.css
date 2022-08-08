@@ -1,0 +1,15 @@
+.reply{
+    color: red;
+    align-self: center;
+    justify-self: end;
+    color: var(--primary1);
+    font-weight: 700;
+    text-transform: capitalize;
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    transition: .2s;
+}
+.reply:hover{
+    opacity: .7;
+}

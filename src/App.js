@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/base.css'
+import './styles/typography.css'
+import CommentsSection from './layout/CommentsSection';
+import myData from './assets/data/data.json'
 
+import ContextProvider from './contexts/ContextProvider';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ContextProvider>
+
+    
+      <CommentsSection data={myData}/>
+    
+    </ContextProvider>
   );
 }
 

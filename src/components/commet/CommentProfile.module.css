@@ -1,0 +1,16 @@
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    grid-column: 1/-1;
+    
+}
+.profile__img{
+    width: 6.4rem;
+    cursor: pointer;
+}
+.profile__username{
+    color: var(--gray1);
+    font-weight: 700;
+    cursor: pointer;
+}

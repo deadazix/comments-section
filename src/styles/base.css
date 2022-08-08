@@ -1,0 +1,27 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary1:hsl(238, 40%, 52%);
+    --primary2:hsl(358, 79%, 66%);
+    --primary3:hsl(239, 57%, 85%);
+    --primary4:hsl(357, 100%, 86%);
+    --gray1:hsl(212, 24%, 26%);
+    --gray2:hsl(211, 10%, 45%);
+    --gray3:hsl(223, 19%, 93%);
+    --gray4:hsl(228, 33%, 97%);
+    --gray5:white;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Rubik';
+    font-size: 1.8rem;
+    color: var(--gray2);   
+    background-color:var(--gray4);
+    padding: 2rem 1rem;
+}

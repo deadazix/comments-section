@@ -1,0 +1,11 @@
+.content{
+    grid-column: 1/-1;
+    line-height: 1.4;
+
+}
+
+.replyingto{
+    color: var(--primary1);
+    font-weight: 700;
+    display: inline-block;
+}

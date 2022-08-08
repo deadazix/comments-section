@@ -1,0 +1,34 @@
+.score{
+    /* display: flex;
+    align-items: center; */
+    /* justify-items: center; */
+    /* gap: 2px; */
+    
+}
+.container{
+    background-color: var(--gray3);
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 12rem;
+    
+    border-radius: 1rem;
+    color: var(--primary1);
+    font-weight: 500;
+}
+.container img{
+    
+    cursor: pointer;
+    display: inline-block;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    transition: .2s;   
+    
+
+}
+.container img:hover{
+    filter: invert(40%) sepia(87%) saturate(495%) hue-rotate(200deg) brightness(75%) contrast(88%);
+    
+    
+}
