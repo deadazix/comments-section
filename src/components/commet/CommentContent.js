@@ -1,7 +1,6 @@
 import classes from "./CommentContent.module.css";
 const CommentContent = (probs) => {
-  console.log(probs.isReply);
-  console.log(probs.comment.replyingTo);
+
 
   return (
     <div className={classes.content}>

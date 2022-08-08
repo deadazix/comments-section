@@ -4,7 +4,7 @@ import DeleteEditBtn from "../UI/DeleteEditBtn";
 const CommentReply = (probs) => {
 
   if(!probs.isUser) return (
-    <div className={classes.reply}>
+    <div onClick={probs.onReply} className={classes.reply}>
       <div>
         <img src={replyIcon} alt='reply Icon'/>
       </div>

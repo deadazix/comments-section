@@ -9,7 +9,8 @@ const CommentProfile = (probs) => {
         const imageName = probs.png.slice(probs.webp.lastIndexOf('/')+1)
         img = require(`../../assets/images/avatars/${imageName}`)
     }
-    console.log(probs.isUser)
+    
+    
 
 
     

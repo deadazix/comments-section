@@ -2,6 +2,7 @@ import React,{ useContext } from 'react'
 import classes from './CommentsSection.module.css'
 import Comment from '../components/commet/Comment'
 
+import ReplyBox from '../components/UI/ReplyBox'
 import DataContext from '../contexts/data-context'
 const CommentsSection = probs=>{
     const DataCTX = useContext(DataContext)
@@ -13,7 +14,8 @@ const CommentsSection = probs=>{
                 
                 return <Comment isReply={false} key={comment.id} comment={DataCTX.comments[index]} id={comment.id}/>
             })}
-        
+
+        <ReplyBox type='SEND'  currentUser={DataCTX.currentUser} ></ReplyBox>
         </div>
     )
 }
