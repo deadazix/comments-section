@@ -1,0 +1,28 @@
+.container{
+    font-weight: 500;
+    display: flex;
+    justify-self: end;
+    gap: 1rem;
+    align-self: center;
+}
+
+.delete{
+    color: var(--primary2);
+    cursor:pointer;
+
+}
+.edit{
+    color: var(--primary1);
+    cursor:pointer;
+
+}
+.delete:hover,.edit:hover{
+    opacity: .6;
+}
+@media (min-width:56.25rem){
+    .container{
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+    
+}

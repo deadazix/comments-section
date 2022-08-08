@@ -7,3 +7,9 @@
     row-gap: 2rem;
     border-radius: 1rem;
 }
+
+@media (min-width:56.25rem){
+ .comment{
+    grid-template-columns: auto 1fr 1fr;
+ }   
+}

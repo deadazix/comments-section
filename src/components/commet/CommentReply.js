@@ -1,5 +1,6 @@
 import classes from "./CommentReply.module.css";
 import replyIcon from "./../../assets/images/icon-reply.svg";
+import DeleteEditBtn from "../UI/DeleteEditBtn";
 const CommentReply = (probs) => {
 
   if(!probs.isUser) return (
@@ -11,7 +12,7 @@ const CommentReply = (probs) => {
     </div>
   );
   else if (probs.isUser){
-    return <h1>delete</h1>
+    return <DeleteEditBtn/>
   }
 };
 export default CommentReply;

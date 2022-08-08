@@ -20,8 +20,13 @@ html{
 }
 body{
     font-family: 'Rubik';
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: var(--gray2);   
     background-color:var(--gray4);
     padding: 2rem 1rem;
+}
+@media (min-width:56.25rem){
+    html{
+        font-size: 75%;
+    }
 }

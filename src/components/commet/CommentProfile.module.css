@@ -14,3 +14,17 @@
     font-weight: 700;
     cursor: pointer;
 }
+.you{
+    background-color: var(--primary1);
+    padding: 4px 8px;
+    border-radius: 1rem;
+    font-weight: 500;
+    color: white;
+}
+@media (min-width:56.25rem){
+    .profile{
+        grid-column: 2/4;
+        grid-row: 1/2;
+        
+    }
+}

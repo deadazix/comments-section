@@ -13,7 +13,7 @@ const Comment = (probs) => {
     probs.comment.user.username === dataCTX.currentUser.username;
 
   const content = probs.comment.content;
-  const toWho = probs.reciverUsername;
+ 
   return (
     <React.Fragment>
       <div className={classes["comment"]}>
@@ -21,6 +21,7 @@ const Comment = (probs) => {
           username={probs.comment.user.username}
           png={probs.comment.user.image.png}
           webp={probs.comment.user.image.webp}
+          isUser={isUserComment}
           time={probs.comment.createdAt}
         />
         <CommentContent

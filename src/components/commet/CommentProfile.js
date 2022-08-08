@@ -9,6 +9,7 @@ const CommentProfile = (probs) => {
         const imageName = probs.png.slice(probs.webp.lastIndexOf('/')+1)
         img = require(`../../assets/images/avatars/${imageName}`)
     }
+    console.log(probs.isUser)
 
 
     
@@ -17,6 +18,7 @@ const CommentProfile = (probs) => {
     <div className={classes.profile}>
       <img className={classes.profile__img} src={img} alt='profile' />
       <div className={classes.profile__username}>{probs.username}</div>
+      {probs.isUser&&<div className={classes.you}>you</div>}
       <div className={classes.profile__time} >{probs.time}</div>
     </div>
   );

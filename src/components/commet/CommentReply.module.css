@@ -13,3 +13,9 @@
 .reply:hover{
     opacity: .7;
 }
+@media (min-width:56.25rem){
+    .reply{
+        grid-row: 1/2;
+        grid-column: 3/4;
+    }
+}
