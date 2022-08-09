@@ -3,7 +3,10 @@ import React from "react"
 const DataContext = React.createContext({
     comments:'',
     currentUser:{},
+    
     addComment:(toWHoId)=>{},
-    deleteComment:(commentId)=>{}
+    deleteComment:(commentId)=>{},
+   
+
 }) 
 export default DataContext

@@ -12,7 +12,7 @@ const CommentReply = (probs) => {
     </div>
   );
   else if (probs.isUser){
-    return <DeleteEditBtn/>
+    return <DeleteEditBtn onModal={probs.onModal} comment={probs.comment}/>
   }
 };
 export default CommentReply;

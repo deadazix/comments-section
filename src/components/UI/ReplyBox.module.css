@@ -16,6 +16,7 @@
     padding: 1rem;
     grid-column: 2/4;
     color: var(--gray2);
+    font-weight: 500;
 
     
 }
