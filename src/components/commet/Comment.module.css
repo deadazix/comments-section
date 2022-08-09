@@ -7,6 +7,9 @@
     row-gap: 2rem;
     border-radius: 1rem;
 }
+.self{
+    background-color: rgb(222, 228, 250);
+}
 
 @media (min-width:56.25rem){
  .comment{

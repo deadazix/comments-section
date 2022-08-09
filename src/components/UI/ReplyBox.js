@@ -49,6 +49,7 @@ const ReplyBox = (probs) => {
 
     dataCTX.addComment(newComment);
     probs.type==='REPLY'&& probs.onClose()
+    setTextAreaValue('')
   };
   return (
     <div className={classes.container}>
@@ -60,6 +61,7 @@ const ReplyBox = (probs) => {
         rows="14"
         cols="10"
         wrap="soft"
+        placeholder="pls enter more 10 char"
       ></textarea>
       <button onClick={onClickHandler}>{probs.type}</button>
     </div>

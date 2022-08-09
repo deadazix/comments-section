@@ -4,6 +4,13 @@ import myData from "../assets/data/data.json";
 
 const reducerFunction = (state, action) => {
   if (action.type === "REPLY") {
+    // if(action.comment.content?.trim().length<10||!action.comment.content){
+     
+    //   return {
+    //     comments: state.comments,
+    //     currentUser: myData.currentUser,
+    //   }
+    // }
     const index = state.comments.findIndex((comment) => {
       return comment.id === action.comment.insideId;
     });
@@ -18,6 +25,13 @@ const reducerFunction = (state, action) => {
     };
   }
   if(action.type==='SEND'){
+    if(action.comment.content?.trim().length<10||!action.comment.content){
+     
+      return {
+        comments: state.comments,
+        currentUser: myData.currentUser,
+      }
+    }
    
     return {
       comments: state.comments.concat(action.comment),
@@ -31,8 +45,7 @@ const reducerFunction = (state, action) => {
     const index = state.comments.findIndex((comment) => {
       return comment.id === action.comment.insideId;
     });
-    console.log(commentId)
-    console.log(state.comments[index].id)
+
     if(commentId===state.comments[index].id){
       state.comments.pop(index)
       return {
@@ -54,6 +67,23 @@ const reducerFunction = (state, action) => {
     
     
   }
+  if(action.type==='SCORE'){
+    
+    const commentId = action.comment.id
+    const index = state.comments.findIndex((comment) => {
+      return comment.id === action.comment.insideId;
+    });
+    if(commentId===state.comments[index].id){
+     
+      state.comments[index].score=action.newScore
+    }else{
+      const indexReply =  state.comments[index].replies.findIndex(reply=>{
+      
+        return reply.id===commentId
+      })
+      state.comments[index].replies[indexReply].score=action.newScore
+    }
+  }
   return {
     comments: state.comments,
     currentUser: state.currentUser,
@@ -73,6 +103,10 @@ const ContextProvider = (probs) => {
   const deleteCommentHandler = comment=>{
     dispatchDataState({type:'DELETE',comment:comment})
   }
+  const setNewScoreHandler = (comment,newScore)=>{
+
+    dispatchDataState({type:'SCORE',comment:comment,newScore})
+  }
   const value = {
     comments: dataState.comments,
     currentUser: dataState.currentUser,
@@ -80,6 +114,7 @@ const ContextProvider = (probs) => {
     setLastId,
     addComment: addCommentHandler,
     deleteComment:deleteCommentHandler,
+    setNewScore:setNewScoreHandler,
  
   };
 

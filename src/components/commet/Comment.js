@@ -31,7 +31,7 @@ const Comment = (probs) => {
   }
   return (
     <React.Fragment>
-      <div className={classes["comment"]}>
+      <div className={`${classes.comment} ${isUserComment&& classes.self}`}>
         <CommentProfile
           username={probs.comment.user.username}
           png={probs.comment.user.image.png}
@@ -45,7 +45,7 @@ const Comment = (probs) => {
           content={content}
           comment={probs.comment}
         />
-        <CommentScore score={probs.comment.score} />
+        <CommentScore comment={probs.comment} score={probs.comment.score} />
 
         <CommentReply
           isUser={isUserComment}
